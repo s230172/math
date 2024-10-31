@@ -1,10 +1,12 @@
 # streamlit 라이브러리 불러오기
 import streamlit as st      
+import numpy as np
 
 # 제목 쓰기
 st.title('동생아 수학 공부하자!')  
 # 부제목 쓰기
 st.subheader('오늘의 주제: 양수와 음수')
+st.subheader('(삼각함수를 곁들인...)')
 # 본문 쓰기
 st.write('음수?? 어렵지 않아!') 
 
@@ -23,6 +25,7 @@ with col2:
 
 #사용자의 입력을 받아서 a에 저장하기(초기값은 0)
 a = st.number_input('수를 입력하세요', value= 0)  
+b = st.number_input('수를 입력하세요', value= 0)  
 
 # 버튼 생성 및 동작
 if st.button('양수일까 음수일까?'):
@@ -32,3 +35,6 @@ if st.button('양수일까 음수일까?'):
               st.write('음수입니다')
        else:
               st.write('0입니다')
+
+if st.button('sin값은 얼마일까?'):
+       st.write(np.sin(b))
