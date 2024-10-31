@@ -25,16 +25,7 @@ with col2:
 
 #사용자의 입력을 받아서 a에 저장하기(초기값은 0)
 a = st.number_input('수를 입력하세요', value= 0)  
-b = st.number_input('수를 입력하세요', value= 0)  
 
-# 버튼 생성 및 동작
-if st.button('양수일까 음수일까?'):
-       if a > 0:
-              st.write('양수입니다')
-       elif a < 0:
-              st.write('음수입니다')
-       else:
-              st.write('0입니다')
 
 if st.button('sin값은 얼마일까?'):
-       st.write(np.sin(b))
+       st.write(np.sin(a))
